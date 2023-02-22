@@ -40,6 +40,11 @@ fun Greeting(name: String) {
     backgroundColor = 0x94481a83,
     device = Devices.NEXUS_6P
 )
+
+@Composable
+fun AndroidLogo() {
+
+}
 @Composable
 fun DefaultPreview() {
     BusinessCardTheme {
