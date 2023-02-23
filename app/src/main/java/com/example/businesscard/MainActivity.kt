@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    PersonalData("Android")
+                    PersonalData("Android", title = "Android Developer")
                 }
             }
         }
@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun PersonalData(name: String, title: String) {
-    Text(text = "Hello $name!")
+    Text(text = "Hello $name! You are $title")
 }
 
 @Preview(showBackground = true,
@@ -44,6 +44,6 @@ fun PersonalData(name: String, title: String) {
 @Composable
 fun DefaultPreview() {
     BusinessCardTheme {
-        PersonalData("Android")
+        PersonalData("Android", title = "A Good Guy")
     }
 }
