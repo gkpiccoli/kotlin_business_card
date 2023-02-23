@@ -3,9 +3,7 @@ package com.example.businesscard
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -13,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.sp
 import com.example.businesscard.ui.theme.BusinessCardTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    PersonalData("Android")
                 }
             }
         }
@@ -34,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
+fun PersonalData(name: String, title: String) {
     Text(text = "Hello $name!")
 }
 
@@ -45,22 +42,8 @@ fun Greeting(name: String) {
 )
 
 @Composable
-fun AndroidLogo() {
-
-}
-
-@Composable
-fun ContactDetails(name: String, title: String) {
-    Column{
-        Text(text = name, fontSize = 32.sp, modifier = Modifier
-            .fillMaxWidth())
-
-    }
-
-}
-@Composable
 fun DefaultPreview() {
     BusinessCardTheme {
-        Greeting("Android")
+        PersonalData("Android")
     }
 }
