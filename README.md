@@ -5,4 +5,4 @@ Um app para Android que exibe um cartão de visita .
 - Mídias Sociais
 - Logo Android
 
-## AndroidBasics
+## #AndroidBasics
