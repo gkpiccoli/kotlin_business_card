@@ -49,7 +49,7 @@ fun PersonalData(name: String, title: String) {
 
 
         Text(text = title, fontSize = 24.sp, modifier = Modifier
-        .fillMaxWidth()
+            .fillMaxWidth()
             .wrapContentWidth(Alignment.CenterHorizontally)
             .padding(start = 30.dp, top = 20.dp, end = 1.dp))
     }
@@ -80,4 +80,5 @@ fun DefaultPreview() {
     BusinessCardTheme {
         PersonalData("Gustavo K. Piccoli", title = "Android Developer Extraordinaire")
     }
+    AndroidLogo()
 }
