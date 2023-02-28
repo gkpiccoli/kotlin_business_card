@@ -40,10 +40,11 @@ class MainActivity : ComponentActivity() {
 fun PersonalData(name: String, title: String) {
     Column {
         Text(text = "$name $title", fontSize = 32.sp,
-        modifier = Modifier
-            .fillMaxWidth()
-            .wrapContentWidth(Alignment.CenterHorizontally)
-            .padding(all = 20.dp))
+            modifier = Modifier
+
+                .wrapContentWidth(Alignment.CenterHorizontally)
+                .padding(all = 20.dp)
+                .offset(x = 10.dp))
 
 
 
@@ -60,11 +61,16 @@ fun PersonalData(name: String, title: String) {
 fun AndroidLogo() {
     val image = painterResource(id = R.drawable.android_logo)
     Box {
-        Image(painter = image, contentDescription = null,
+        Image(painter = image, contentDescription = "Android Logo",
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight(),
+                .size(
+                    width = 200.dp, height = 100.dp
+                )
+                .padding(all = 20.dp),
+
             contentScale = ContentScale.Crop)
+
+
 
     }
 
